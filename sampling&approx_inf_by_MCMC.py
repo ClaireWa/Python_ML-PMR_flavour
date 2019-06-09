@@ -6,6 +6,7 @@ import scipy.stats as st
 
 
 # Part A
+# Gauss proposal dist
 def p_gauss(x, y):
     """
     :param x: value for x
@@ -15,7 +16,7 @@ def p_gauss(x, y):
     # assume mean is 0 and variance is 1
     return st.multivariate_normal.pdf([x, y])
 
-
+# function implementing Metropolis Hastings algorithm using Gauss proposal dist.
 # def mh(p_star, param_init, num_samples=5000, stepsize=1.0):
 #     """
 #     :param p_star: a function on theta that is proportional to the density of interest p*(theta);
@@ -47,6 +48,8 @@ def p_gauss(x, y):
 
 
 # Part B
+# test algorithm by sampling 5,000 samples from p(x,y)=N(x;0,1)N(y;0,1)
+
 # number of samples = 5000, initialise at x=0, y=0, stepsize =1
 # s1 = mh(p_gauss, param_init=[0, 0], num_samples=5000, stepsize=1)
 # plt.scatter(s1[:, 0][20:], s1[:, 1][20:], c="b", label = "Rest of the samples")
@@ -101,7 +104,7 @@ def mh(p_star, param_init, num_samples=5000, stepsize=1.0, W=0):
 
 
 # Part C
-
+# Bayesian poisson reg model
 
 def p_(alpha, beta):
     """
