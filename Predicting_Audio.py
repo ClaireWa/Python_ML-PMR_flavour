@@ -1,6 +1,5 @@
-"""
-Script for MLPR Assignment 1 - Predicting Audio
-"""
+## Predicting Audio (polynomial predictor, linear predictor, comparisons)
+
 from __future__ import print_function, division
 
 import numpy as np
